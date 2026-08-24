@@ -6,4 +6,4 @@
 - [x] Create a responsive browser workbench with prompt input, structured preview, runnable form preview, and definition export.
 - [x] Add portable Linux/Windows launchers, configurable localhost serving, assumptions, and security documentation.
 - [x] Write and run automated schema, form-rendering, engine, and invalid-specification tests.
-- [ ] Create the private GitHub repository, commit, push, and verify origin/main parity.
+- [x] Create the private GitHub repository, commit, push, and verify origin/main parity.
