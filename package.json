@@ -1,0 +1,11 @@
+{
+  "name":"mini-tool-factory",
+  "version":"1.0.0",
+  "private":true,
+  "type":"module",
+  "description":"Safe declarative calculator-definition generator with a controlled local runtime.",
+  "bin":{"mini-tool-factory":"./src/cli.mjs"},
+  "scripts":{"test":"node --test tests/*.test.mjs","check":"node --check src/*.mjs","demo":"node src/cli.mjs demo --out reports/demo"},
+  "engines":{"node":">=22"},
+  "license":"MIT"
+}
