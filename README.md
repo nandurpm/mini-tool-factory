@@ -51,3 +51,9 @@ The automated suite covers deterministic generation, schema validation, invalid-
 ## License
 
 MIT.
+
+## Live Render Demo
+
+A responsive, synthetic/demo report is available at [https://mini-tool-factory.onrender.com](https://mini-tool-factory.onrender.com). The hosted view is read-only and preserves the repository's documented local-first boundaries.
+
+<!-- render-live-url:https://mini-tool-factory.onrender.com -->
