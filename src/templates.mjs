@@ -1,3 +1,10 @@
+/*
+ * ============================================================
+ * FILE: templates.mjs
+ * PURPOSE: Renders the bounded project templates emitted by Mini Tool Factory's generation engine.
+ * ============================================================
+ */
+
 import { cloneSpec,validateToolSpec } from "./schema.mjs";
 const constant=value=>({op:"constant",value}),input=key=>({op:"input",key}),multiply=(...values)=>({op:"multiply",values}),divide=(...values)=>({op:"divide",values}),add=(...values)=>({op:"add",values});
 export const TEMPLATES={

@@ -1,3 +1,10 @@
+/*
+ * ============================================================
+ * FILE: engine.mjs
+ * PURPOSE: Validates tool specifications and coordinates Mini Tool Factory's deterministic project-generation pipeline.
+ * ============================================================
+ */
+
 import { validateToolSpec } from "./schema.mjs";
 const tidy=value=>Number(Number(value).toPrecision(12));
 export function evaluateExpression(node,input){switch(node.op){case"constant":return node.value;case"input":return input[node.key];case"add":return node.values.reduce((sum,value)=>sum+evaluateExpression(value,input),0);case"subtract":return node.values.slice(1).reduce((result,value)=>result-evaluateExpression(value,input),evaluateExpression(node.values[0],input));case"multiply":return node.values.reduce((product,value)=>product*evaluateExpression(value,input),1);case"divide":{const divisor=evaluateExpression(node.values[1],input);if(divisor===0)throw new Error("The formula would divide by zero.");return evaluateExpression(node.values[0],input)/divisor}case"power":return evaluateExpression(node.values[0],input)**evaluateExpression(node.values[1],input);case"sqrt":{const value=evaluateExpression(node.value,input);if(value<0)throw new Error("The formula cannot take the square root of a negative value.");return Math.sqrt(value)}case"negate":return-evaluateExpression(node.value,input);default:throw new Error("Unsupported controlled expression operation.")}}
